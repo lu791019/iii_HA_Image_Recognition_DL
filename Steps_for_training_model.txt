@@ -1,0 +1,31 @@
+可參考此篇作法
+https://www.analyticsvidhya.com/blog/2018/11/implementation-faster-r-cnn-python-object-detection/
+
+1.先安裝所需套件 
+  pip install -r requirements.txt 
+
+2.此程式已CMD下指令 (因為現在只有batch檔 只有window版本, shell on going)
+  turn on CMD(CLI) and use
+
+
+3.在CMD下先移動到此目錄位置
+  cd ./keras-frcnn-master
+
+4.先準備要training的照片 
+(專案iii_HA_醫療病徵辨識 可去找DEEPLESION相關 :https://nihcc.app.box.com/v/DeepLesion)
+(或是使用image資料夾)
+
+5.準備training data 所需的txt檔 格式如下:
+filepath,x1,y1,x2,y2,class_name  -->可用python或其他方式產生此檔
+(filepath為 step 4 照片的目錄)
+(example:若要train image目錄->filepath C:\check\your\loaction\image\which_image_name.png)
+
+[欄位解釋]
+filepath is the path of the training image
+x1 is the xmin coordinate for bounding box
+y1 is the ymin coordinate for bounding box
+x2 is the xmax coordinate for bounding box
+y2 is the ymax coordinate for bounding box
+class_name is the name of the class in that bounding box
+
+6.python train_frcnn.py -o simple -p trainning.txt

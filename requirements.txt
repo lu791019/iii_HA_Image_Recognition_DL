@@ -1,0 +1,12 @@
+h5py
+Keras==2.0.3
+numpy
+pandas
+pyhdfs
+opencv-python
+sklearn
+confluent_kafka
+mysql-connector
+sqlalchemy
+kafka-python
+confluent-kafka

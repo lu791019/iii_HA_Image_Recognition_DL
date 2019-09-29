@@ -1,0 +1,20 @@
+本議題所提供之影像資料，包含 9 個類別（有疾病類別 + 8 種病徵類別）。
+
+下載資料 ct_data.zip 檔案包含：
+
+train_images.zip：訓練所需的影像資料（JPEG格式），共計 7,255 張。
+train_1.csv：僅提供標註框，包含 7 個欄位，image_filename,label_id,x,y,w,h 和 confidence。
+image_filename：影像的檔名。
+label_id：未定義病癥（9 表示 有病症）。
+x, y： 標註框之最小x與y。
+w：標註框之寬度。
+h：標註框之高度。
+confidence：信心指數(均為1.0)
+train_2.csv：包含 7 個欄位，image_filename,label_id,x,y,w,h 和 confidence。
+image_filename：影像的檔名。
+label_id：病徵分類類別,其值只能是下列其中之一：1、2、3、4、5、6、7、8（1 表示 Bone，2 表示 Abdome，3 表示 Mediatinum，4 表示 Liver，5 表示 Lung，6 表示 Kidney，7 表示 Soft tissue，8 表示 Pelvis）。
+x, y： 病徵標註框之最小x與y。
+w：病徵標註框之寬度。
+h：病徵標註框之高度。
+confidence：信心指數(均為1.0)。
+test.csv：僅提供檔案名稱，包含 1 個欄位，image_filename。
