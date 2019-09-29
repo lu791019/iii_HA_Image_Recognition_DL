@@ -1,3 +1,27 @@
+# CT Image Recognition by keras-faster RCNN by Transfering Learning
+## 透過遷移學習 由keras-faster RCNN 訓練模型 由於 h5 權重檔過大 可至dropbox下載( https://www.dropbox.com/home/h5%20file )
+## Kears-FRCNN: https://github.com/yhenon/keras-frcnn/
+## 此方法配合 Kafka 是為了使資料能傳至已架設好的flask web, 依照以下步驟使用:
+
+### 1.先安裝所需套件 
+  pip install -r requirements.txt 
+
+### 2.此程式已CMD下指令 (因為現在只有batch檔 只有window版本, shell on going)
+  turn on CMD(CLI) and use
+
+### 3.在CMD下先移動到此目錄位置
+  cd ./keras-frcnn-master
+
+### 4.先打開KAFKA Consumer 讓他在後台不斷runing (KAFKA安裝和使用請看另一份)
+  python Consumer_img.py
+
+### 5.for demo)如果想自行DEMO 將照片上傳並辨識 請加上此步驟
+  python producer.py
+   
+### 6.如果你已有來源(如flask web)則開啟下方bat檔(包含producer_CT_recog.py+test_frcnn.py+img_upload.py 路徑要做更改)
+  recognition.bat
+
+
 # keras-frcnn
 Keras implementation of Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks.
 cloned from https://github.com/yhenon/keras-frcnn/
